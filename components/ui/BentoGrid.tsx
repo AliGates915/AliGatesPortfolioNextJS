@@ -1,17 +1,30 @@
-"use client"; // 👈 add this at the very top
+"use client"; // 👈 make sure this is at the top
 
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import dynamic from "next/dynamic";
 
+
+
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
-import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 
-// 👉 dynamically import to avoid SSR issues
-const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
+// ✅ Disable SSR for browser-only components
+const BackgroundGradientAnimation = dynamic(
+  () => import("./GradientBg").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const GridGlobe = dynamic(
+  () => import("./GridGlobe").then((mod) => mod.default),
+  { ssr: false }
+);
+
+const Lottie = dynamic(
+  () => import("lottie-react").then((mod) => mod.default),
+  { ssr: false }
+);
 
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => (
@@ -146,10 +159,11 @@ export const BentoGridItem = ({
               <div className="absolute -bottom-5 right-0">
                 <Lottie
                   animationData={animationData}
-                  play={copied}
+                  
                   loop={copied}
                   style={{ width: 400, height: 200 }}
                 />
+
               </div>
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
