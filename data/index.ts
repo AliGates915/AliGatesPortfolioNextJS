@@ -80,19 +80,19 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Point of Sales (POS) Web Application",
+    des: "A comprehensive web-based Point of Sales application built to streamline business management processes. The platform offers a clean dashboard and intuitive interface for handling customers, orders, purchases, and analytics.",
+    img: "/p2.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://pos-frontend-eta-blue.vercel.app/",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
+    title: "Immersive 3D Animated Portfolio with React, Three.js & TypeScript",
+    des: "A visually dynamic 3D animated portfolio built with Three.js, Framer Motion, GSAP, and React, delivering smooth interactions and immersive effects.",
+    img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://aligates-portfolio.netlify.app/",
   },
   {
     id: 4,
@@ -173,28 +173,28 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Engineer Intern at Fantech Lab",
+    desc: "I worked as a remote associate employee on the project based on React.js.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Full Stack Developer",
-    desc: "With Expertise in designing and building end-to-end web applications.",
+    title: "Frontend Development Intern at Efaida Technology",
+    desc: "Work on real-life projects using React.js and related technologies.Gain hands-on experience in building web applications using Redux Toolkit and animations with framer motion.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance Web Dev Project",
-    desc: "Led the dev of a web app for a client, from initial concept to deployment.",
+    title: "Remote MERN Stack Developer at Afaq Technologies",
+    desc: "Led the dev of a web app for a client, from initial concept to deployment.Developed dynamic dashboards and interactive UI components using React.js and Redux.Collaborated with backend developers to integrate RESTful APIs and ensure seamless data flow.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
+    title: "Lead Frontend Developer at Hashlogics",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
@@ -205,17 +205,20 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    url: "https://github.com/AliGates915", // GitHub link
+    url: "https://github.com/AliGates915",
+    name: "GitHub"
   },
   {
     id: 2,
     img: "/twit.svg",
-    url: "https://twitter.com/yourusername", // Twitter link
+    url: "https://twitter.com/yourusername",
+    name: "Twitter"
   },
   {
     id: 3,
     img: "/link.svg",
-    url: "https://linkedin.com/in/yourusername", // LinkedIn link
+    url: "https://www.linkedin.com/in/aligates877",
+    name: "LinkedIn"
   },
 ];
 

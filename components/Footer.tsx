@@ -1,5 +1,4 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
@@ -32,28 +31,44 @@ const Footer = () => {
           />
         </a>
       </div>
+      
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Ali Gates
         </p>
 
-       <div className="flex items-center md:gap-3 gap-6">
-  {socialMedia.map((info) => (
-    <a
-      key={info.id}
-      href={info.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-10 h-10 cursor-pointer flex justify-center items-center 
-                 backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 
-                 bg-black-200 rounded-lg border border-black-300 
-                 hover:scale-110 transition-transform duration-300"
-    >
-      <img src={info.img} alt="social icon" width={20} height={20} />
-    </a>
-  ))}
-</div>
-
+        <div className="flex items-center md:gap-3 gap-6 mt-6 md:mt-0">
+          {socialMedia.map((info) => (
+            <a
+              key={info.id}
+              href={info.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center 
+                         backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 
+                         bg-black-200 rounded-lg border border-black-300 
+                         hover:scale-110 transition-all duration-300
+                         hover:shadow-lg hover:shadow-purple/50
+                         group relative"
+              aria-label={`Visit my ${info.name} profile`}
+            >
+              <img 
+                src={info.img} 
+                alt={`${info.name} icon`} 
+                width={20} 
+                height={20} 
+                className="transition-all duration-300 group-hover:brightness-125"
+              />
+              
+              {/* Tooltip on hover */}
+              <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 
+                              bg-black text-white text-xs px-2 py-1 rounded opacity-0 
+                              group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                {info.name}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );
