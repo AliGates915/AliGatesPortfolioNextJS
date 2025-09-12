@@ -2,7 +2,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
@@ -57,8 +56,6 @@ const Hero = () => {
             words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
-
-         
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl text-white-100">
             Hi! I&apos;m Ali Gates, a Full Stack Developer based in Lahore , Pakistan.
